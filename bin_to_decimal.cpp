@@ -6,18 +6,62 @@ using namespace std;
 
 int main(){
 
-    string binary_string = "101010";
+    // _______________________________________________________________________
 
-    int result = 0;
+                                // METHOD 1
 
-    for(int i = 0 ; i < binary_string.length() ; i++){
-        int value = pow(((binary_string[i] - '0') * 2) , ((binary_string.length() - 1)-i));
-        result += value;
-    }
+    // string binary_string = "101010";
 
-    result -= 1; // TO DECREASE THE VALUE FOR THE LAST 0(POWER)
+    // int result = 0;
 
-    cout << result << "\n";
+    // for(int i = 0 ; i < binary_string.length() ; i++){
+    //     int value = pow(((binary_string[i] - '0') * 2) , ((binary_string.length() - 1)-i));
+    //     result += value;
+    // }
 
+    // result -= 1; // TO DECREASE THE VALUE FOR THE LAST 0(POWER)
+
+    // cout << result << "\n";
+
+    // _______________________________________________________________________
+    
+    
+
+
+
+
+    
+    // _______________________________________________________________________
+
+                            // METHOD 2
+    
+
+    
+        unsigned long long binary = 1100000;
+
+
+        int result = 0 , power=0;
+
+        int remainder;
+
+        while(binary != 0){
+
+            remainder = binary%10;
+
+            binary = binary/10;
+
+            result += remainder * pow(2 , power);
+
+            power += 1;
+        }
+
+        cout << result;
+
+
+    // _______________________________________________________________________
+
+
+    
+    
     return 0;
 }
