@@ -7,13 +7,13 @@ using namespace std;
 
 int main(){
 
-    int arr[5] = {34 , -3 , 43 , -30 , 493};
+    int arr[6] = {34 , 44 , -132 , -34 , 4 , -343};
 
-    int max_sum = 0;
+    int max_sum = arr[0];
 
     int current_sum = 0;
 
-    for(unsigned int i=0 ; i < 5 ; i++){
+    for(unsigned int i=0 ; i < 6 ; i++){
 
         current_sum += arr[i];
 
