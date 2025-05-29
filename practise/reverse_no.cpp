@@ -3,18 +3,15 @@ using namespace std;
 
 int main(){
 
-    unsigned int reverse = 0;
+    int reverse = 0;
 
-    unsigned int number = 124;
+    int number = 33466;
 
-    while(number > 0){
+    while(number != 0){
 
-        unsigned int remainder = number % 10;
+        reverse = (reverse * 10) + (number % 10);
 
         number /= 10;
-
-        reverse = (reverse * 10) + remainder;
-
     }
 
     cout << reverse << endl;
